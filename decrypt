@@ -1,0 +1,36 @@
+package ujjman.encryption;
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.*;
+public class decrypt {
+	public static void main(String []args)throws Exception {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter File Path to Decrypt ");
+		String st=sc.nextLine();
+		System.out.println("Enter Path to Store Decrypted File ");
+		String str=sc.nextLine();
+		File f2=new File(str);
+		File f=new File(st);
+		FileReader ft=new FileReader(f);
+		BufferedReader bf=new BufferedReader(ft);
+		int a=bf.read();
+		FileWriter fd=new FileWriter(f2);
+		FileWriter fd2=new FileWriter(f);
+		int temp=0;
+		String s=Integer.toString(a);
+		while(a!=-1)
+		{
+			temp=((a*2)-22)/2;
+		fd.write(temp);
+		fd.flush();
+		
+			a=bf.read();
+			s=Integer.toString(a);
+			
+		}
+		System.out.println("decrypted");
+	}	
+}
