@@ -31,6 +31,6 @@ public class decrypt {
 			s=Integer.toString(a);
 			
 		}
-		System.out.println("decrypted file");
+		System.out.println("decrypted");
 	}	
 }
